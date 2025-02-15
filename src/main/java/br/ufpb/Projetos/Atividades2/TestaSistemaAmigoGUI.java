@@ -1,6 +1,5 @@
 package br.ufpb.Projetos.Atividades2;
 
-import org.w3c.dom.ls.LSOutput;
 
 import javax.swing.*;
 import java.util.ArrayList;
