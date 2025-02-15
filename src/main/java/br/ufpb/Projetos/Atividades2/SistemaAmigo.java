@@ -84,4 +84,8 @@ public class SistemaAmigo {
         }
         throw new AmigoInexistenteException("Amigo não cadastrado");
     }
+
+    public List<Amigo> getAmigos(){
+        return this.amigos;
+    }
 }
