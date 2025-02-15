@@ -66,9 +66,11 @@ public class SistemaAmigo {
 
     public void configuraAmigoSecretoDe(String email, String emailDoSorteado) throws AmigoInexistenteException{
         for(Amigo a: this.amigos){
-            if(a.getEmail().equalsIgnoreCase(email)){
-                a.setEmailAmigoSorteado(emailDoSorteado);
-            }else{
+            try{
+                if(a.getEmail().equalsIgnoreCase(email)){
+                    a.setEmailAmigoSorteado(emailDoSorteado);
+                }
+            }catch (AmigoInexistenteException e){
                 throw new AmigoInexistenteException("Amigo não cadastrado");
             }
         }
