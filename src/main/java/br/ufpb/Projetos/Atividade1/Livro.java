@@ -35,6 +35,22 @@ public class Livro extends Arquivo {
         return cont;
     }
 
+    public int getCapitulos() {
+        return capitulos;
+    }
+
+    public void setCapitulos(int capitulos) {
+        this.capitulos = capitulos;
+    }
+
+    public List<Capitulo> getListaDeCap() {
+        return listaDeCap;
+    }
+
+    public void setListaDeCap(List<Capitulo> listaDeCap) {
+        this.listaDeCap = listaDeCap;
+    }
+
     //toString, equals e hashcode
     public String toString(){
         return "Livro: "+super.getTitulo()+"; lançado em: "+getAnoDeEscritura()+" Com: "+getQuantCapitulosDoLivro()+" capitulos; Com: "+getQuantPaginasTotais()+" páginas.";
