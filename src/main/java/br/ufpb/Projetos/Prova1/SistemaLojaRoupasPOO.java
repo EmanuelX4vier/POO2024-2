@@ -1,16 +1,30 @@
 package br.ufpb.Projetos.Prova1;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.io.IOException;
+import java.util.*;
 
 public class SistemaLojaRoupasPOO implements SistemaLojaRoupas {
+
+    private GravadorDeRoupas gravadorDeRoupas;
     private Map<String, Roupa> roupasMap;
 
 
     public SistemaLojaRoupasPOO() {
+
         this.roupasMap = new HashMap<>();
+        this.gravadorDeRoupas = new GravadorDeRoupas();
+
+    }
+
+    public void recuperaRoupas() throws IOException, RoupaJaExisteException {
+        Collection<Roupa> roupasAchadas = this.gravadorDeRoupas.recuperarRoupas();
+        for(Roupa r: roupasAchadas){
+            this.cadastraRoupa(r.getCodigo(), r.getDescricao(), r.getQuantidade(), r.getTamanho());
+        }
+    }
+
+    public void salvarRoupas() throws IOException {
+        this.gravadorDeRoupas.gravaRoupas(this.roupasMap.values());
     }
 
     @Override
