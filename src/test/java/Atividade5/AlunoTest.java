@@ -5,17 +5,10 @@ import br.ufpb.Projetos.Atividade5.Aluno;
 import br.ufpb.Projetos.Atividade5.GravadorDeDados;
 import br.ufpb.Projetos.Atividade5.SistemaCadastraAluno;
 import org.junit.jupiter.api.Test;
-import java.io.Serializable.*;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 public class AlunoTest {
-
-
-
-
-
 
     @Test
     public void testaGravador() throws IOException {

@@ -16,7 +16,7 @@ public class GravadorDeDados implements Serializable {
         ArrayList<Aluno> alunosArrayList= new ArrayList<>();
         alunosArrayList.addAll(alunos);
         try(ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(listaAlunos))){
-            out.writeObject(alunosArrayList);
+            out.writeObject(alunos);
         }
     }
 
