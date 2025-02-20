@@ -27,6 +27,7 @@ public class AlunoTest {
         alunos.add(aluno1);
         alunos.add(aluno2);
         alunos.add(aluno3);
+        gravador.gravaDados(alunos);
         List<Aluno> alunosRecuperados = new ArrayList<>(gravador.recuperaDados());
         System.out.println(alunos);
         System.out.println(alunosRecuperados);

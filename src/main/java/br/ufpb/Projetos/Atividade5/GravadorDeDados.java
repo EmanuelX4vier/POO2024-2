@@ -1,13 +1,8 @@
 package br.ufpb.Projetos.Atividade5;
 
-
-
-import br.ufpb.Projetos.Prova1.Roupa;
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Objects;
 
 public class GravadorDeDados implements Serializable {
 
@@ -21,7 +16,7 @@ public class GravadorDeDados implements Serializable {
         ArrayList<Aluno> alunosArrayList= new ArrayList<>();
         alunosArrayList.addAll(alunos);
         try(ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(listaAlunos))){
-            out.writeObject(alunos);
+            out.writeObject(alunosArrayList);
         }
     }
 

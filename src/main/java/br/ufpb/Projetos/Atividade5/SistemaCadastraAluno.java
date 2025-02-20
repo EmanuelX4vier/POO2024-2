@@ -1,8 +1,6 @@
 package br.ufpb.Projetos.Atividade5;
 
-import javax.swing.*;
 import java.io.IOException;
-import java.io.Serial;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
